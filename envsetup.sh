@@ -1558,7 +1558,7 @@ function mka() {
         *)
             #schedtool -B -n 1 -e ionice -n 1 make -j `cat /proc/cpuinfo | grep "^processor" | wc -l` "$@"
 	    #for opensuse 12.1, should add the full path for the schedtool
-	    /usr/sbin/schedtool -B -n 1 -e ionice -n 1 make -j `cat /proc/cpuinfo | grep “^processor” | wc -l` “$@”
+	   /usr/sbin/schedtool -B -n 1 -e ionice -n 1 make -j `cat /proc/cpuinfo | grep  ^processor  | wc -l` “$@”
             ;;
     esac
 }
