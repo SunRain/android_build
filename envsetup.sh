@@ -1556,7 +1556,7 @@ function mka() {
             make -j `sysctl hw.ncpu|cut -d" " -f2` "$@"
             ;;
         *)
-            schedtool -B -n 1 -e ionice -n 1 make -j `cat /proc/cpuinfo | grep "^processor" | wc -l` "$@"
+            /usr/sbin/schedtool -B -n 1 -e ionice -n 1 make -j `cat /proc/cpuinfo | grep ^processor | wc -l` "$@"
             ;;
     esac
 }
@@ -1567,7 +1567,7 @@ function reposync() {
             repo sync -j 4 "$@"
             ;;
         *)
-            schedtool -B -n 1 -e ionice -n 1 repo sync -j 4 "$@"
+            /usr/sbin/schedtool -B -n 1 -e ionice -n 1 repo sync -j 4 "$@"
             ;;
     esac
 }
