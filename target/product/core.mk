@@ -63,6 +63,7 @@ PRODUCT_PACKAGES := \
     ip-up-vpn \
     ip6tables \
     iptables \
+    libphoneloc-sqljni \
     libOpenMAXAL \
     libOpenSLES \
     libaudiopreprocessing \
