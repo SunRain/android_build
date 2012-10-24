@@ -118,7 +118,9 @@ PRODUCT_PACKAGES := \
     lint \
     uiautomator \
     telephony-common \
-    mms-common
+    mms-common \
+    magicmod-common \
+    libmagic_runtime
 
 PRODUCT_COPY_FILES += \
     system/core/rootdir/init.usb.rc:root/init.usb.rc \
